@@ -6,7 +6,7 @@ public class AccountServiceImpl implements AccountService {
         if(account.getBalance() > 0 && account.getBalance() >= amount && amount > 0) {
             account.withdraw(amount);
         } else {
-            throw new Exception("The account is not enough provided.");
+            throw new Exception("The account is not enough provided or amount is incorrect.");
         }
     }
 
